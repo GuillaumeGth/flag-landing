@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="fr" prefix="og: https://ogp.me/ns#">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ===== PRIMARY SEO ===== -->
+  <title>Fläag — Application de messagerie géolocalisée | Messages cachés autour de vous</title>
+  <meta name="description" content="Fläag est une application mobile qui vous permet de laisser des messages géolocalisés, lisibles uniquement à moins de 100 mètres. Découvrez des messages cachés autour de vous. Disponible sur iOS et Android." />
+  <meta name="keywords" content="application géolocalisée, messagerie géolocalisée, messages cachés, GPS, exploration urbaine, application mobile, flaag, fläag, découverte, messages anonymes, carte interactive, notification proximité" />
+  <meta name="author" content="Fläag" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="French" />
+  <meta name="theme-color" content="#A78BFA" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Fläag" />
+  <link rel="canonical" href="https://flaag.app/" />
+
+  <!-- ===== OPEN GRAPH ===== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Fläag" />
+  <meta property="og:title" content="Fläag — Découvrez les messages cachés autour de vous" />
+  <meta property="og:description" content="Laissez un message à un endroit précis. Il n'existera que là. Téléchargez Fläag, l'application de messagerie géolocalisée disponible sur iOS et Android." />
+  <meta property="og:image" content="https://flaag.app/assets/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://flaag.app/" />
+  <meta property="og:locale" content="fr_FR" />
+
+  <!-- ===== TWITTER CARD ===== -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Fläag — Messages géolocalisés cachés autour de vous" />
+  <meta name="twitter:description" content="Laissez un message à un endroit précis. Il n'existera que là. Découvrez Fläag, l'app de messagerie géolocalisée." />
+  <meta name="twitter:image" content="https://flaag.app/assets/og-image.png" />
+
+  <!-- ===== ICONS ===== -->
+  <link rel="icon" type="image/png" href="assets/logo transparent.png" />
+  <link rel="apple-touch-icon" href="assets/logo transparent.png" />
+
+  <!-- ===== JSON-LD STRUCTURED DATA ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://flaag.app/#website",
+        "url": "https://flaag.app/",
+        "name": "Fläag",
+        "description": "Application mobile de messagerie géolocalisée",
+        "inLanguage": "fr-FR",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://flaag.app/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "MobileApplication",
+        "@id": "https://flaag.app/#app",
+        "name": "Fläag",
+        "description": "Fläag est une application de messagerie géolocalisée. Laissez des messages ancrés à des coordonnées GPS précises, lisibles uniquement à moins de 100 mètres du point de dépôt. Explorez votre ville, découvrez des messages cachés.",
+        "url": "https://flaag.app/",
+        "image": "https://flaag.app/assets/logo transparent.png",
+        "applicationCategory": "SocialNetworkingApplication",
+        "applicationSubCategory": "Messaging",
+        "operatingSystem": "iOS, Android",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR"
+        },
+        "featureList": [
+          "Messages géolocalisés",
+          "Carte interactive",
+          "Notifications de proximité",
+          "Messagerie privée",
+          "Messages audio",
+          "Messages photo"
+        ],
+        "inLanguage": "fr-FR",
+        "author": {
+          "@type": "Organization",
+          "name": "Fläag",
+          "url": "https://flaag.app/"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://flaag.app/#organization",
+        "name": "Fläag",
+        "url": "https://flaag.app/",
+        "logo": "https://flaag.app/assets/logo transparent.png",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "support@flaag.app",
+          "contactType": "customer support",
+          "availableLanguage": "French"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- ===== FONTS ===== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg-primary: #0A0A12;
+      --bg-secondary: #12121D;
+      --bg-tertiary: #1A1A28;
+      --surface: #1E1E2D;
+      --surface-glass: rgba(30, 30, 45, 0.7);
+      --violet: #A78BFA;
+      --violet-light: #C4B5FD;
+      --violet-dark: #7C3AED;
+      --violet-deeper: #6D28D9;
+      --lavender: #D8B4FE;
+      --text-primary: #FFFFFF;
+      --text-secondary: #B8B8D0;
+      --text-muted: #7A7A95;
+      --border: rgba(167, 139, 250, 0.2);
+      --border-glow: rgba(167, 139, 250, 0.45);
+      --success: #5FD68A;
+      --warning: #FFA94D;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ============ NOISE TEXTURE OVERLAY ============ */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.4;
+    }
+
+    /* ============ NAV ============ */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background: rgba(10, 10, 18, 0.8);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .nav-logo img {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+    }
+
+    .nav-logo-text {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--lavender), var(--violet), var(--violet-dark));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--violet-light);
+    }
+
+    .nav-cta {
+      padding: 10px 24px;
+      background: linear-gradient(135deg, var(--violet), var(--violet-dark));
+      border: none;
+      border-radius: 50px;
+      color: #fff;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s;
+      box-shadow: 0 0 20px rgba(167, 139, 250, 0.3);
+    }
+
+    .nav-cta:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    /* ============ HERO ============ */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 24px 80px;
+      position: relative;
+    }
+
+    /* Radial glow background */
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -60%);
+      width: 800px;
+      height: 600px;
+      background: radial-gradient(ellipse, rgba(167, 139, 250, 0.15) 0%, rgba(124, 58, 237, 0.08) 40%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      background: rgba(167, 139, 250, 0.1);
+      border: 1px solid var(--border-glow);
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--violet-light);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 32px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--success);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.2); }
+    }
+
+    .hero h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.2rem, 8vw, 6rem);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      position: relative;
+      z-index: 1;
+      margin-bottom: 8px;
+    }
+
+    .hero h1 .brand {
+      background: linear-gradient(135deg, var(--lavender) 0%, var(--violet) 50%, var(--violet-dark) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1rem, 2.5vw, 1.4rem);
+      color: var(--text-secondary);
+      max-width: 560px;
+      margin: 20px auto 40px;
+      line-height: 1.7;
+      font-weight: 400;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-subtitle strong {
+      color: var(--violet-light);
+      font-weight: 600;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .btn-store {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 28px;
+      background: linear-gradient(135deg, var(--violet) 0%, var(--violet-dark) 60%, var(--violet-deeper) 100%);
+      border-radius: 14px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 24px rgba(167, 139, 250, 0.35);
+    }
+
+    .btn-store:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(167, 139, 250, 0.5);
+    }
+
+    .btn-store.secondary {
+      background: rgba(30, 30, 45, 0.9);
+      border: 1px solid var(--border-glow);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+    }
+
+    .btn-store.secondary:hover {
+      background: rgba(42, 42, 60, 0.9);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+
+    .store-icon {
+      font-size: 1.4rem;
+      line-height: 1;
+    }
+
+    .store-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .store-text span:first-child {
+      font-size: 0.7rem;
+      opacity: 0.8;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .store-text span:last-child {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    /* ============ MOCKUP ============ */
+    .mockup-section {
+      display: flex;
+      justify-content: center;
+      padding: 0 24px 80px;
+      position: relative;
+    }
+
+    .phone-mockup {
+      width: 280px;
+      height: 560px;
+      background: var(--surface);
+      border-radius: 40px;
+      border: 1.5px solid var(--border-glow);
+      box-shadow:
+        0 0 0 1px rgba(167, 139, 250, 0.1),
+        0 40px 80px rgba(0, 0, 0, 0.6),
+        0 0 60px rgba(167, 139, 250, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .phone-notch {
+      width: 80px;
+      height: 24px;
+      background: #000;
+      border-radius: 0 0 16px 16px;
+      margin-top: 0;
+      z-index: 2;
+    }
+
+    .phone-screen {
+      flex: 1;
+      width: 100%;
+      background: linear-gradient(180deg, #0d0d1a 0%, #1a0a2e 50%, #0d0d1a 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Simulated map */
+    .map-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(167, 139, 250, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(167, 139, 250, 0.05) 1px, transparent 1px);
+      background-size: 30px 30px;
+    }
+
+    .map-dot {
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background: var(--violet);
+      border-radius: 50%;
+      box-shadow: 0 0 12px rgba(167, 139, 250, 0.8);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .map-dot::after {
+      content: '';
+      position: absolute;
+      inset: -6px;
+      border-radius: 50%;
+      background: rgba(167, 139, 250, 0.2);
+      animation: ripple 3s ease-out infinite;
+    }
+
+    .map-dot.d1 { top: 30%; left: 40%; animation-delay: 0s; }
+    .map-dot.d2 { top: 55%; left: 65%; animation-delay: 1s; width: 8px; height: 8px; background: var(--lavender); }
+    .map-dot.d3 { top: 20%; left: 70%; animation-delay: 2s; width: 10px; height: 10px; }
+    .map-dot.d4 { top: 70%; left: 30%; animation-delay: 0.5s; width: 8px; height: 8px; background: var(--success); box-shadow: 0 0 12px rgba(95, 214, 138, 0.8); }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-4px); }
+    }
+
+    @keyframes ripple {
+      0% { transform: scale(1); opacity: 0.6; }
+      100% { transform: scale(3); opacity: 0; }
+    }
+
+    .phone-bottom-bar {
+      height: 60px;
+      width: 100%;
+      background: rgba(20, 20, 32, 0.95);
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 0 24px;
+    }
+
+    .tab-icon {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+    }
+
+    .tab-icon-active {
+      color: var(--violet);
+    }
+
+    /* ============ SECTIONS ============ */
+    section {
+      padding: 80px 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--violet);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+
+    .section-desc {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      max-width: 560px;
+      line-height: 1.7;
+    }
+
+    /* ============ FEATURES ============ */
+    #features {
+      background: var(--bg-secondary);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 56px;
+    }
+
+    .feature-card {
+      background: var(--surface-glass);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px;
+      backdrop-filter: blur(20px);
+      transition: border-color 0.3s, transform 0.3s;
+    }
+
+    .feature-card:hover {
+      border-color: var(--border-glow);
+      transform: translateY(-4px);
+    }
+
+    .feature-icon {
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, rgba(167, 139, 250, 0.2), rgba(124, 58, 237, 0.2));
+      border: 1px solid rgba(167, 139, 250, 0.3);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+
+    .feature-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--text-primary);
+    }
+
+    .feature-card p {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.65;
+    }
+
+    /* ============ HOW IT WORKS ============ */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 0;
+      margin-top: 56px;
+      position: relative;
+    }
+
+    .step {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 32px;
+      position: relative;
+    }
+
+    .step::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 40px;
+      height: 2px;
+      width: 50%;
+      background: linear-gradient(90deg, var(--violet-dark), transparent);
+    }
+
+    .step:last-child::after {
+      display: none;
+    }
+
+    .step-number {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--violet), var(--violet-dark));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      box-shadow: 0 0 20px rgba(167, 139, 250, 0.4);
+    }
+
+    .step h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 1.05rem;
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* ============ DIVIDER ============ */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-glow), transparent);
+      margin: 0 auto;
+      max-width: 800px;
+    }
+
+    /* ============ DOWNLOAD SECTION ============ */
+    #download {
+      background: var(--bg-secondary);
+      text-align: center;
+    }
+
+    .download-card {
+      background: linear-gradient(135deg, rgba(167, 139, 250, 0.08) 0%, rgba(124, 58, 237, 0.05) 100%);
+      border: 1px solid var(--border-glow);
+      border-radius: 28px;
+      padding: 64px 40px;
+      max-width: 700px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .download-card::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(ellipse, rgba(167, 139, 250, 0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .download-card h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 700;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+
+    .download-card p {
+      color: var(--text-secondary);
+      margin-bottom: 40px;
+      font-size: 1rem;
+    }
+
+    .download-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ============ SUPPORT ============ */
+    #support {
+      text-align: center;
+    }
+
+    .support-content {
+      max-width: 560px;
+      margin: 0 auto;
+    }
+
+    .support-email {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 32px;
+      padding: 16px 32px;
+      background: var(--surface-glass);
+      border: 1px solid var(--border-glow);
+      border-radius: 14px;
+      backdrop-filter: blur(20px);
+      color: var(--violet-light);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.2s;
+    }
+
+    .support-email:hover {
+      background: rgba(167, 139, 250, 0.1);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(167, 139, 250, 0.2);
+    }
+
+    .support-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 48px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .support-card {
+      background: var(--surface-glass);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      backdrop-filter: blur(20px);
+      text-align: left;
+    }
+
+    .support-card .icon {
+      font-size: 1.5rem;
+      margin-bottom: 12px;
+    }
+
+    .support-card h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .support-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* ============ FOOTER ============ */
+    footer {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border);
+      padding: 40px 24px;
+    }
+
+    .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-logo img {
+      width: 28px;
+      height: 28px;
+      border-radius: 7px;
+    }
+
+    .footer-logo-text {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--lavender), var(--violet));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--violet-light);
+    }
+
+    .footer-copy {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* ============ RESPONSIVE ============ */
+    @media (max-width: 768px) {
+      /* Nav */
+      nav {
+        padding: 14px 20px;
+      }
+      .nav-links {
+        display: none;
+      }
+
+      /* Hero */
+      .hero {
+        padding: 88px 20px 56px;
+        min-height: auto;
+      }
+      .hero-badge {
+        font-size: 0.72rem;
+        padding: 5px 14px;
+        margin-bottom: 24px;
+      }
+      .hero-subtitle {
+        margin: 16px auto 32px;
+        padding: 0 4px;
+      }
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        max-width: 320px;
+        gap: 12px;
+      }
+      .btn-store {
+        justify-content: center;
+        padding: 14px 20px;
+      }
+
+      /* Mockup */
+      .mockup-section {
+        padding: 0 24px 56px;
+      }
+      .phone-mockup {
+        width: 240px;
+        height: 460px;
+      }
+
+      /* Sections */
+      section {
+        padding: 56px 20px;
+      }
+      .section-title {
+        font-size: clamp(1.6rem, 6vw, 2.2rem);
+      }
+      .section-desc {
+        font-size: 0.97rem;
+      }
+
+      /* Features */
+      .features-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 36px;
+      }
+      .feature-card {
+        padding: 24px;
+      }
+
+      /* Steps */
+      .steps {
+        grid-template-columns: 1fr;
+        margin-top: 36px;
+      }
+      .step {
+        padding: 24px 20px;
+        border-bottom: 1px solid var(--border);
+      }
+      .step:last-child {
+        border-bottom: none;
+      }
+      .step::after {
+        display: none;
+      }
+      .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+        margin-bottom: 16px;
+      }
+
+      /* Download */
+      .download-card {
+        padding: 40px 20px;
+        border-radius: 20px;
+      }
+      .download-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+      }
+      .download-buttons .btn-store {
+        justify-content: center;
+      }
+
+      /* Support */
+      .support-email {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 20px;
+        font-size: 0.92rem;
+      }
+      .support-cards {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 32px;
+      }
+
+      /* Footer */
+      .footer-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 16px;
+      }
+      .footer-links {
+        justify-content: center;
+        gap: 16px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .hero h1 {
+        font-size: 1.9rem;
+        letter-spacing: -0.02em;
+      }
+      .nav-logo-text {
+        font-size: 1.2rem;
+      }
+      .phone-mockup {
+        width: 210px;
+        height: 400px;
+      }
+    }
+
+    /* ============ SCROLL ANIMATIONS ============ */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ============ HERO APP ICON ============ */
+    .hero-app-icon {
+      width: 100px;
+      height: 100px;
+      border-radius: 22px;
+      margin-bottom: 28px;
+      position: relative;
+      z-index: 1;
+      box-shadow:
+        0 0 0 1px rgba(167, 139, 250, 0.3),
+        0 20px 60px rgba(0, 0, 0, 0.5),
+        0 0 40px rgba(167, 139, 250, 0.2);
+    }
+
+    /* ============ TOPOGRAPHIC LINES (decorative) ============ */
+    .topo-bg {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .topo-ring {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(167, 139, 250, 0.06);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">
+      <img src="assets/logo transparent.png" alt="Fläag logo" />
+      <span class="nav-logo-text">Fläag</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#features">Fonctionnalités</a></li>
+      <li><a href="#how">Comment ca marche</a></li>
+      <li><a href="#download">Télécharger</a></li>
+      <li><a href="#support">Support</a></li>
+    </ul>
+    <a href="#download" class="nav-cta">Télécharger</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="topo-bg">
+      <div class="topo-ring" style="width:600px;height:600px;top:-200px;left:-100px;"></div>
+      <div class="topo-ring" style="width:900px;height:900px;top:-350px;left:-250px;"></div>
+      <div class="topo-ring" style="width:400px;height:400px;bottom:0;right:-100px;"></div>
+    </div>
+
+    <div class="hero-badge">Bientôt, quelque part</div>
+
+    <h1>
+      Certains mots<br />
+      <span class="brand">n'existent qu'ici</span>
+    </h1>
+
+    <p class="hero-subtitle">
+      Des messages enfouis dans le tissu du monde réel — invisibles, silencieux, attendant
+      que <strong>quelqu'un passe</strong>. Déposez une trace. Laissez-la veiller.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#download" class="btn-store">
+        <span class="store-icon">&#xF8FF;</span>
+        <span class="store-text">
+          <span>Télécharger sur l'</span>
+          <span>App Store</span>
+        </span>
+      </a>
+      <a href="#download" class="btn-store secondary">
+        <span class="store-icon">&#9654;</span>
+        <span class="store-text">
+          <span>Disponible sur</span>
+          <span>Google Play</span>
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <!-- PHONE MOCKUP -->
+  <div class="mockup-section">
+    <div class="phone-mockup">
+      <div class="phone-notch"></div>
+      <div class="phone-screen">
+        <div class="map-grid"></div>
+        <div class="map-dot d1"></div>
+        <div class="map-dot d2"></div>
+        <div class="map-dot d3"></div>
+        <div class="map-dot d4"></div>
+        <!-- App icon overlaid on map, center-top -->
+        <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;gap:8px;pointer-events:none;">
+          <img src="assets/logo transparent.png" alt="" style="width:48px;height:48px;border-radius:12px;box-shadow:0 0 20px rgba(167,139,250,0.6),0 4px 16px rgba(0,0,0,0.5);opacity:0.92;" />
+        </div>
+      </div>
+      <div class="phone-bottom-bar">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7A7A95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7A7A95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#7A7A95" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <div class="container">
+      <p class="section-label fade-in">Ce que recèle Fläag</p>
+      <h2 class="section-title fade-in">La ville garde des secrets</h2>
+      <p class="section-desc fade-in">Sous les rues que vous arpentez chaque jour sommeillent des voix, des images, des aveux. Il suffit d'être là.</p>
+
+      <div class="features-grid">
+        <div class="feature-card fade-in">
+          <div class="feature-icon">&#x1F4CD;</div>
+          <h3>Mots cousus au sol</h3>
+          <p>Un message n'existe qu'à l'endroit où il est né. La distance le tait. Seule votre présence le fait parler.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon">&#x1F5FA;&#xFE0F;</div>
+          <h3>Une carte qui dissimule</h3>
+          <p>Les points brillent sur la carte comme des braises sous la cendre. Ce qu'ils contiennent, vous ne le saurez qu'en vous approchant.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon">&#x1F514;</div>
+          <h3>Quelque chose vous appelle</h3>
+          <p>Quand vous frôlez un message sans le savoir, Fläag murmure. Une vibration légère — une invitation.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon">&#x1F91D;</div>
+          <h3>Conversations secrètes</h3>
+          <p>Certains mots ne sont pas pour tout le monde. Photos, voix, confidences — partagés avec ceux que vous avez choisis.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon">&#x1F3A4;</div>
+          <h3>La voix, restée là</h3>
+          <p>Enregistrez. Laissez votre souffle accroché à un carrefour, un banc, une fenêtre. Quelqu'un l'entendra, un jour.</p>
+        </div>
+        <div class="feature-card fade-in">
+          <div class="feature-icon">&#x1F510;</div>
+          <h3>Invisible aux absents</h3>
+          <p>La carte ne trahit rien. Aucun contenu n'est exposé à distance. Les secrets ne s'ouvrent qu'aux présents.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how">
+    <div class="container">
+      <p class="section-label fade-in">Le rituel</p>
+      <h2 class="section-title fade-in">Trois gestes, un monde parallèle</h2>
+      <p class="section-desc fade-in">Fläag n'est pas compliqué. Il est juste différent — ancré dans le monde d'avant les écrans, celui où les lieux avaient de la mémoire.</p>
+
+      <div class="steps">
+        <div class="step fade-in">
+          <div class="step-number">1</div>
+          <h3>Enfouissez quelque chose</h3>
+          <p>Choisissez un endroit qui compte. Écrivez, photographiez, enregistrez. Laissez-le là, comme une lettre sans destinataire — ou avec un seul.</p>
+        </div>
+        <div class="step fade-in">
+          <div class="step-number">2</div>
+          <h3>Errez. La carte vous guidera</h3>
+          <p>Des lueurs sur la carte signalent des présences. Ce sont des messages qui dorment, à moins de cent mètres, attendant que vous soyez là.</p>
+        </div>
+        <div class="step fade-in">
+          <div class="step-number">3</div>
+          <h3>La rencontre a lieu</h3>
+          <p>Le message s'éveille. Vous le lisez, vous l'entendez. Peut-être que vous répondez. Une conversation naît — liée à ce lieu pour toujours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- DOWNLOAD -->
+  <section id="download">
+    <div class="container">
+      <div class="download-card fade-in">
+        <p class="section-label" style="text-align:center">Le passage</p>
+        <h2>Quelque chose vous attend,<br/>tout près d'ici</h2>
+        <p>Peut-être à l'angle de votre rue. Peut-être sous le banc où vous lisez ceci. Installez Fläag, et regardez le monde autrement.</p>
+        <div class="download-buttons">
+          <a href="#" class="btn-store" aria-label="Télécharger sur l'App Store (bientôt disponible)">
+            <span class="store-icon">&#xF8FF;</span>
+            <span class="store-text">
+              <span>Télécharger sur l'</span>
+              <span>App Store</span>
+            </span>
+          </a>
+          <a href="#" class="btn-store secondary" aria-label="Disponible sur Google Play (bientôt disponible)">
+            <span class="store-icon">&#9654;</span>
+            <span class="store-text">
+              <span>Disponible sur</span>
+              <span>Google Play</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUPPORT -->
+  <section id="support">
+    <div class="container">
+      <div class="support-content">
+        <p class="section-label fade-in">Contact</p>
+        <h2 class="section-title fade-in">On est là, quelque part</h2>
+        <p class="section-desc fade-in" style="margin: 0 auto;">
+          Une question, un doute, une idée à murmurer ? Écrivez-nous. Contrairement aux messages Fläag, celui-ci voyagera loin.
+        </p>
+        <a href="mailto:support@flaag.app" class="support-email fade-in">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          support@flaag.app
+        </a>
+      </div>
+
+      <div class="support-cards">
+        <div class="support-card fade-in">
+          <div class="icon">&#x1F4AC;</div>
+          <h4>Quelque chose cloche</h4>
+          <p>Un bug, un comportement étrange, un silence là où il ne devrait pas y en avoir. Dites-le nous.</p>
+        </div>
+        <div class="support-card fade-in">
+          <div class="icon">&#x1F4A1;</div>
+          <h4>Une idée vous hante</h4>
+          <p>Vous avez imaginé quelque chose que Fläag ne fait pas encore. Nous écoutons les rêveurs.</p>
+        </div>
+        <div class="support-card fade-in">
+          <div class="icon">&#x1F512;</div>
+          <h4>Vos traces vous appartiennent</h4>
+          <p>Questions sur vos données, votre empreinte, la suppression de votre compte.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <img src="assets/logo transparent.png" alt="Fläag" />
+        <span class="footer-logo-text">Fläag</span>
+      </div>
+      <ul class="footer-links">
+        <li><a href="#features">Fonctionnalités</a></li>
+        <li><a href="cgu.html">CGU</a></li>
+        <li><a href="cgu.html#confidentialite">Confidentialité</a></li>
+        <li><a href="mailto:support@flaag.app">Contact</a></li>
+      </ul>
+      <p class="footer-copy">&copy; 2026 Fläag. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll-triggered fade-in animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-in').forEach((el, i) => {
+      el.style.transitionDelay = `${(i % 4) * 80}ms`;
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
